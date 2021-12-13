@@ -32,26 +32,26 @@ JSP를 포함한 다른 뷰 템플릿들은 해당 파일을 열면, 예를 들�
  ◦ 링크 URL 표현식: @{...}  
  ◦ 조각 표현식: ~{...}  
 ##### • 리터럴  
- ◦ 텍스트: 'one text', 'Another one!',…  
+> ◦ 텍스트: 'one text', 'Another one!',…  
  ◦ 숫자: 0, 34, 3.0, 12.3,…  
  ◦ 불린: true, false  
  ◦ 널: null  
  ◦ 리터럴 토큰: one, sometext, main,…  
 ##### • 문자 연산:  
- ◦ 문자 합치기: +  
+> ◦ 문자 합치기: +  
  ◦ 리터럴 대체: |The name is ${name}|  
 ##### • 산술 연산:  
- ◦ Binary operators: +, -, *, /, %  
+> ◦ Binary operators: +, -, *, /, %  
  ◦ Minus sign (unary operator): -  
 ##### • 불린 연산:  
- ◦ Binary operators: and, or  
+> ◦ Binary operators: and, or  
  ◦ Boolean negation (unary operator): !, not  
 ##### • 비교와 동등:  
- ◦ 비교: >, <, >=, <= (gt, lt, ge, le)  
+> ◦ 비교: >, <, >=, <= (gt, lt, ge, le)  
  ◦ 동등 연산: ==, != (eq, ne)  
 ##### • 조건 연산:  
- ◦ If-then: (if) ? (then)  
+> ◦ If-then: (if) ? (then)  
  ◦ If-then-else: (if) ? (then) : (else)  
  ◦ Default: (value) ?: (defaultvalue)  
 ##### • 특별한 토큰:  
- ◦ No-Operation: _  
+> ◦ No-Operation: _  
