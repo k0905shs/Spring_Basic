@@ -4,9 +4,9 @@
 공식 메뉴얼 - 스프링 통합: https://www.thymeleaf.org/doc/tutorials/3.0/thymeleafspring.html  
 
 ## 설명
-###서버 사이드 HTML 렌더링 (SSR)  
-###네츄럴 템플릿  
-###스프링 통합 지원  
+### 서버 사이드 HTML 렌더링 (SSR)  
+### 네츄럴 템플릿  
+### 스프링 통합 지원  
 서버 사이드 HTML 렌더링 (SSR)  
 타임리프는 백엔드 서버에서 HTML을 동적으로 렌더링 하는 용도로 사용된다.  
   
