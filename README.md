@@ -54,4 +54,12 @@ JSP를 포함한 다른 뷰 템플릿들은 해당 파일을 열면, 예를 들�
  ◦ If-then-else: (if) ? (then) : (else)  
  ◦ Default: (value) ?: (defaultvalue)  
 ##### • 특별한 토큰:  
-> ◦ No-Operation: _  
+> ◦ No-Operation: _    
+  
+
+#Validation 링크 정리
+하이버네이트 Validator 관련 링크
+공식 사이트: http://hibernate.org/validator/
+공식 메뉴얼: https://docs.jboss.org/hibernate/validator/6.2/reference/en-US/html_single/
+검증 애노테이션 모음: https://docs.jboss.org/hibernate/validator/6.2/reference/en-US/
+html_single/#validator-defineconstraints-spec
