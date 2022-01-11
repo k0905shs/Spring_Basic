@@ -220,7 +220,7 @@ public class ValidationItemControllerV2 {
         //이미 BindingResult는 타겟을 알고 있다!!
         log.info("objectName={}", bindingResult.getObjectName());
         log.info("target={}", bindingResult.getTarget());
-        
+
         if (bindingResult.hasErrors()) {
             log.info("errors={}", bindingResult);
             return "validation/v2/addForm";
