@@ -21,13 +21,17 @@ import javax.servlet.http.HttpSession;
 public class HomeController {
 
     private final MemberRepository memberRepository;
-    private final SessionManager sessionManager;
+    private final SessionManager sessionManager;//V2
 
 //    @GetMapping("/")
     public String home() {
         return "home";
     }
 
+    /**
+     * LoginControllerV1을 사용 쿠키를 직접 체크해서 로그인 상태 확인
+     * @CookieVlaue -> 쿠키값 가져오기 Default = ture
+     */
 //    @GetMapping("/")
     public String homeLogin(@CookieValue(name = "memberId", required = false) Long memberId, Model model) {
 
@@ -63,7 +67,7 @@ public class HomeController {
 //    @GetMapping("/")
     public String homeLoginV3(HttpServletRequest request, Model model) {
 
-        HttpSession session = request.getSession(false);
+        HttpSession session = request.getSession(false); //이때는 세션을 만들려는 의도가 아님으로 created : false // default = true
         if (session == null) {
             return "home";
         }
@@ -80,9 +84,15 @@ public class HomeController {
         return "loginHome";
     }
 
+    /**
+     * 스프링에 제공하는 @SessionAttribute 사용
+     * 위에 V3랑 로직은 아예 똑같지만 @SessionAttribute 사용 여부가 전부,
+     * @SessionAttribute는  Session을 생성하지 않음 찾을 그래서 찾을 때만 사용 할 수 있다.
+     */
 //    @GetMapping("/")
     public String homeLoginV3Spring(
             @SessionAttribute(name = SessionConst.LOGIN_MEMBER, required = false) Member loginMember, Model model) {
+//        @SessionAttribute(name = "loginMember", required = false) Member loginMember, Model model) {
 
         //세션에 회원 데이터가 없으면 home
         if (loginMember == null) {

@@ -32,6 +32,9 @@ public class LoginController {
         return "login/loginForm";
     }
 
+    /**
+     * 쿠키를 사용해서 로그인을 유지하는 방법 V1
+     */
 //    @PostMapping("/login")
     public String login(@Valid @ModelAttribute LoginForm form, BindingResult bindingResult, HttpServletResponse response) {
         if (bindingResult.hasErrors()) {
@@ -46,14 +49,16 @@ public class LoginController {
         }
 
         //로그인 성공 처리
-
-        //쿠키에 시간 정보를 주지 않으면 세션 쿠기(브라우저 종료시 모두 종료)
+        //쿠키에 시간 정보를 주지 않으면 !!세션 쿠기!!(브라우저 종료시 모두 종료)
         Cookie idCookie = new Cookie("memberId", String.valueOf(loginMember.getId()));
-        response.addCookie(idCookie);
+        response.addCookie(idCookie); //서버에서 HttpServletResponse를 보낼때 같이 보내준다.
         return "redirect:/";
 
     }
 
+    /**
+     * 직접 세션을 생성하고 회원 데이터를 보관
+     */
 //    @PostMapping("/login")
     public String loginV2(@Valid @ModelAttribute LoginForm form, BindingResult bindingResult, HttpServletResponse response) {
         if (bindingResult.hasErrors()) {
@@ -126,9 +131,12 @@ public class LoginController {
 
     }
 
+    /**
+     * V1 쿠키사용 로그 아웃
+     */
 //    @PostMapping("/logout")
     public String logout(HttpServletResponse response) {
-        expireCookie(response, "memberId");
+        expireCookie(response, "memberId"); // 쿠키를 만료 시켜버림 끝
         return "redirect:/";
     }
 
@@ -147,6 +155,9 @@ public class LoginController {
         return "redirect:/";
     }
 
+    /**
+     * 쿠키 값을 제거할 때 사용 되는 메소드
+     */
     private void expireCookie(HttpServletResponse response, String cookieName) {
         Cookie cookie = new Cookie(cookieName, null);
         cookie.setMaxAge(0);

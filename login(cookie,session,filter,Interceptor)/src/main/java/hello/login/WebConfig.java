@@ -16,9 +16,17 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import javax.servlet.Filter;
 import java.util.List;
 
+/**
+ * @Configuration bean 등록
+ * implements WebMvcConfigurer
+ */
 @Configuration
 public class WebConfig implements WebMvcConfigurer {
 
+    /**
+     * argumentResolver 등록
+     * @param resolvers
+     */
     @Override
     public void addArgumentResolvers(List<HandlerMethodArgumentResolver> resolvers) {
         resolvers.add(new LoginMemberArgumentResolver());
