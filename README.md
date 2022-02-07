@@ -1,16 +1,16 @@
 # 0.목차  
-  - 타임리프
-      - 기초 태그
+  - 타임리프  
+      - 기초 태그  
       - form
-  - 메시지, 국제화 
-  - 유효성 검사
-  - 쿠키,세션
-  - 필터, 인터셉터
+  - 메시지, 국제화   
+  - 유효성 검사  
+  - 쿠키,세션  
+  - 필터, 인터셉터  
 # 1.타임 리프
-공식 사이트: https://www.thymeleaf.org/  
-공식 메뉴얼 - 기본 기능: https://www.thymeleaf.org/doc/tutorials/3.0/usingthymeleaf.html  
+공식 사이트: https://www.thymeleaf.org/   
+공식 메뉴얼 - 기본 기능: https://www.thymeleaf.org/doc/tutorials/3.0/usingthymeleaf.html   
 공식 메뉴얼 - 스프링 통합: https://www.thymeleaf.org/doc/tutorials/3.0/thymeleafspring.html  
-
+ 
 ## 설명
 #### 서버 사이드 HTML 렌더링 (SSR)  
 #### 네츄럴 템플릿  
